@@ -16,7 +16,7 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   test 'show complete tasks' do
-    skip 'pending'
     complete_tasks = Task.complete
+    assert_includes complete_tasks, tasks(:two)
   end
 end
