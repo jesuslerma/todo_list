@@ -5,4 +5,8 @@ class TaskTest < ActiveSupport::TestCase
     task = Task.new title: nil
     assert_not task.valid?
   end
+
+  test 'task has one list' do 
+    assert_not_nil tasks(:one).list
+  end
 end
