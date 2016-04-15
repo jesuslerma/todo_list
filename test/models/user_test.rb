@@ -4,7 +4,7 @@ class UserTest < ActiveSupport::TestCase
   def setup
     @user = users(:one)
   end
-  test 'delete tasks when list is deleted' do
+  test 'delete lists when user is deleted' do
     @user.destroy
     assert_empty List.where(user_id: @user.id)
   end
